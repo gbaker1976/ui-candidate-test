@@ -1,6 +1,4 @@
-# ExactTarget CloudPages UI Candidates 
-
-This is the candaidate test for ExactTarget CloudPages UI developers.
+# ExactTarget CoPub UI Candidate Test
 
 Follow *ALL* of the following rules.
 
@@ -20,11 +18,10 @@ Follow *ALL* of the following rules.
 
 ## First task to be completed
 + In the root of the project, create a meta.txt file.
-+ In that file, include the following on a single line: Start Time: [timestamp]
-+ Commit this file.
++ In that file, include the following on a single line: Start Time: [timestamp] <-- the date/time you started the test.
++ Commit this file. Your first commit must be of this file and this file only.
 + The 2 hour timer begins after you save and commit your meta.txt file with timestamp.
 
 ### Bonus points by adding the following to meta.txt file
 + TotalTime: HHmm
 + BrowserTesting: Browser.name Browser.version etc
-+ UnitTest: relative path to your own unit test suite
