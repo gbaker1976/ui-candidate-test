@@ -1,0 +1,3 @@
+Start Time: 4/4/2014 10:45am (despite commit time)
+End Time: 4/4/2014 12:30pm
+Total Time: 1 hr 45 min
