@@ -13,12 +13,18 @@ Follow **ALL** of the following rules.
 ## Here are the guidelines for the test:
 + **Only the first 48 hours will be considered as part of your evaluation.**
 + Fork this repository, do your work; commit early/often with descriptive messages. When finished, send a pull request.
++ Make sure you build the feature **exactly** as the user story directs. Priority is important here.
 + Comments are encouraged to highlight your rationale for your work. Remember: **you have only 48 hours**.
 + You may use any JavaScript and/or CSS library you wish, or none at all.
 + You may use any external or inline JavaScript file(s).
 + Unit tests are **required** and should be included in a "tests" folder. You are required to provide 100% test coverage of all public methods you write. Your unit tests will be reviewed so, put your best foot forward.
 + The files in the "data" folder contain data your code should consume for lists, etc.
 + All code you write **must** run without errors on the following browsers (IE 10/9, FF latest, Chrome latest).
+
+## Bonus point opportunities:
++ Using BackboneJS, UnderscoreJS and Marionette well.
++ Including grunt tooling to lint, test and build your repo.
++ Adding some hot sauce to the UI look and feel.
 
 ## First task to be completed
 + In the root of the project, create a timestamp.txt file.
