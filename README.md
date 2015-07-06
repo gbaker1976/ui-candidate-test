@@ -6,7 +6,7 @@ This test includes a user story and a wireframe. These will serve as requirement
 
 The wireframe is a lo-fi mockup of the UI the feature should include. You are not required to dress up the UI in any way, however, doing so will garner bonus points if it's awesome. Though, don't think a sweet UI will help if the primary requirements of the user story aren't met. :)
 
-Please read the user story and review the wireframe to make sure you understand the requirements before beginning the test. Once you make your initial commit, the timer is set for 48 hours. 
+Please read the user story and review the wireframe to make sure you understand the requirements before beginning the test. Once you make your initial commit, the timer is set for 48 hours.
 
 Follow **ALL** of the following rules.
 
@@ -23,6 +23,7 @@ Follow **ALL** of the following rules.
 
 ## Bonus point opportunities:
 + Using BackboneJS, UnderscoreJS and Marionette well.
++ Using [FuelUX](http://getfuelux.com/).
 + Including grunt tooling to lint, test and build your repo.
 + Adding some hot sauce to the UI look and feel.
 
