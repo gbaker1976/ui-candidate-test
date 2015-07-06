@@ -2,7 +2,7 @@
 
 ## Overview
 
-This test includes a user story and a wireframe. These will serve as requirements for a fictitious feature you must build. The user story includes all requirements for the given feature, ranked by priority. Priority is important here. You **must** build the feature in priority order.
+This test includes a user story (UserStory.md) and a wireframe (Wireframe.png). These will serve as requirements for a fictitious feature you must build. The user story includes all requirements for the given feature, ranked by priority. Priority is important here. You **must** build the feature in priority order.
 
 The wireframe is a lo-fi mockup of the UI the feature should include. You are not required to dress up the UI in any way, however, doing so will garner bonus points if it's awesome. Though, don't think a sweet UI will help if the primary requirements of the user story aren't met. :)
 
@@ -21,14 +21,14 @@ Follow **ALL** of the following rules.
 + The files in the "data" folder contain data your code should consume for lists, etc.
 + All code you write **must** run without errors on the following browsers (IE 10/9, FF latest, Chrome latest).
 
-## Bonus point opportunities:
-+ Using BackboneJS, UnderscoreJS and Marionette well.
-+ Using [FuelUX](http://getfuelux.com/).
-+ Including grunt tooling to lint, test and build your repo.
-+ Adding some hot sauce to the UI look and feel.
-
 ## First task to be completed
 + In the root of the project, create a timestamp.txt file.
 + In that file, include the following on a single line: Start Time: [timestamp] <-- the date/time you started the test.
 + Commit this file. Your first commit must be of this file and this file only.
 + The 48 hour timer begins after you commit your meta.txt file with timestamp.
+
+## Bonus point opportunities:
++ Using BackboneJS, UnderscoreJS and Marionette well.
++ Using [FuelUX](http://getfuelux.com/).
++ Including grunt tooling to lint, test and build your repo.
++ Adding some hot sauce to the UI look and feel.
