@@ -13,6 +13,7 @@ Please read the user story and review the wireframe to make sure you understand 
 Follow **ALL** of the following rules.
 
 ## Here are the guidelines for the test:
++ **This test is not meant to be finished.** Speed is not being evaluated, your coding skills are.
 + **Only the first 48 hours will be considered as part of your evaluation.**
 + Fork this repository, do your work; commit early/often with descriptive messages. When finished, send a pull request.
 + Make sure you build the feature **exactly** as the user story directs. Priority is important here.
