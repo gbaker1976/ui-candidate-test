@@ -1,0 +1,30 @@
+[
+	{
+		"name": "City",
+		"type": "text"
+	},
+	{
+		"name": "Email Address",
+		"type": "email"
+	},
+	{
+		"name": "First Name",
+		"type": "text"
+	},
+	{
+		"name": "Last Name",
+		"type": "text"
+	},
+	{
+		"name": "State",
+		"type": "select"
+	},
+	{
+		"name": "Street Address",
+		"type": "textarea"
+	},
+	{
+		"name": "Zip Code",
+		"type": "text"
+	}
+]
