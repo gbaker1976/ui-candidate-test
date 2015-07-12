@@ -1,0 +1,105 @@
+// ====================================================================
+// Mixins
+//
+// These are top-level functions and re-usable styles that can be used
+//  in any Sass partial
+// ====================================================================
+
+/**
+ * Media query breakpoints
+ *
+ * Example usage:
+ *   @include mq(50em) {
+ *     color: red;
+ *   }
+ */
+@mixin mq($point) {
+  @media (min-width: $point) {
+    @content;
+  }
+}
+
+/**
+ * Rem font calculation
+ *
+ * Example usage:
+ *   div {
+ *     @include font-size(20px);
+ *   }
+ */
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
+/**
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ *
+ * Example usage:
+ *   div {
+ *     @include %visuallyhidden;
+ *   }
+ */
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ *
+ * Example usage:
+ *   div {
+ *     @include %hidden;
+ *   }
+ */
+@mixin hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/**
+ * Clearfix
+ *
+ * Example usage:
+ *   div {
+ *     @include %clearfix;
+ *   }
+ */
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Reset list elements
+ *
+ * Example usage:
+ *   ul {
+ *     @include resetlist;
+ *   }
+ */
+ @mixin resetlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ }
