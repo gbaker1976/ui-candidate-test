@@ -1,5 +1,7 @@
 {
   "name": "ui-candidate-test",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "jquery-ui": "~1.11.4"
+  }
 }
