@@ -21,6 +21,7 @@ define([
       //popover
       $(".popover").remove();
       this.$el.popover("show");
+      $(".popover").removeClass("right").addClass("left").css("left", 467);
       $(".popover #save").on("click", this.saveHandler(that));
       $(".popover #cancel").on("click", this.cancelHandler(that));
       //add drag event for all but form name
