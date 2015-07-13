@@ -31,9 +31,9 @@ module.exports = function(grunt) {
           'app/bower_components/jquery-ui/ui/draggable.js',
           'app/assets/javascripts/{,*/}*.js',
           '!app/assets/javascripts/app.min.js',
-          '!app/assets/javascripts/tmp/app.js'
+          '!app/assets/javascripts/_tmp/app.js'
         ],
-        dest: 'app/assets/javascripts/tmp/app.js'
+        dest: 'app/assets/javascripts/_tmp/app.js'
         // files: {
         //   'app/assets/javascripts/app.min.js': [
         //     'app/bower_components/jquery/dist/jquery.js',
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         //     'app/bower_components/jquery-ui/ui/draggable.js',
         //     'app/assets/javascripts/{,*/}*.js',
         //     '!app/assets/javascripts/app.min.js',
-        //     '!app/assets/javascripts/tmp/app.js'
+        //     '!app/assets/javascripts/_tmp/app.js'
         //   ],
         //   'app/tests/all-tests.js': [
         //     'app/assets/javascripts/app.min.js',
@@ -68,14 +68,14 @@ module.exports = function(grunt) {
         //     'app/bower_components/jquery-ui/ui/draggable.js',
         //     'app/assets/javascripts/{,*/}*.js',
         //     '!app/assets/javascripts/app.min.js',
-        //     '!app/assets/javascripts/tmp/app.js'
+        //     '!app/assets/javascripts/_tmp/app.js'
         //   ],
         //   'app/tests/all-tests.js': [
         //     'app/assets/javascripts/app.min.js',
         //     'app/tests/test.js'
         //   ]
         // }
-        src: 'app/assets/javascripts/tmp/app.js',
+        src: 'app/assets/javascripts/_tmp/app.js',
         dest: 'app/assets/javascripts/app.min.js'
       }
     },
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
         },
         ignores: [
           'app/assets/javascripts/app.min.js',
-          'app/assets/javascripts/tmp/*.js'
+          'app/assets/javascripts/_tmp/*.js'
         ]
       },
       all: [
