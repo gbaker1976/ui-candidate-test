@@ -15,3 +15,9 @@ QUnit.module('Data');
       done();
     });
   });
+
+QUnit.module('Create New Field');
+
+  QUnit.test('Looking for function: newField.create()', 1, function(assert) {
+    assert.deepEqual(typeof newField.create, 'function', 'Looking for newField.create() function');
+  });

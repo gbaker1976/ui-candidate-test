@@ -29,6 +29,7 @@ module.exports = function(grunt) {
           'app/bower_components/jquery-ui/ui/widget.js',
           'app/bower_components/jquery-ui/ui/mouse.js',
           'app/bower_components/jquery-ui/ui/draggable.js',
+          'app/bower_components/jquery-ui/ui/droppable.js',
           'app/assets/javascripts/{,*/}*.js',
           '!app/assets/javascripts/app.min.js',
           '!app/assets/javascripts/_tmp/app.js'
