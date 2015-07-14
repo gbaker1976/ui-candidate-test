@@ -1,0 +1,13 @@
+.header {
+  background-color: #fff;
+  padding: 0 20px;
+
+  @include clearfix;
+
+  h1 {
+    font-weight: normal;
+    margin: 10px 0;
+
+    @include font-size(14px);
+  }
+}

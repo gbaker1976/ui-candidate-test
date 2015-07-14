@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.headline {
+  font-weight: normal;
+
+  @include font-size(14px);
+}
