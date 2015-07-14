@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
-  require("time-grunt")(grunt);
+  require('time-grunt')(grunt);
 
   grunt.initConfig({
 
@@ -35,22 +35,6 @@ module.exports = function(grunt) {
           '!app/assets/javascripts/_tmp/app.js'
         ],
         dest: 'app/assets/javascripts/_tmp/app.js'
-        // files: {
-        //   'app/assets/javascripts/app.min.js': [
-        //     'app/bower_components/jquery/dist/jquery.js',
-        //     'app/bower_components/jquery-ui/ui/core.js',
-        //     'app/bower_components/jquery-ui/ui/widget.js',
-        //     'app/bower_components/jquery-ui/ui/mouse.js',
-        //     'app/bower_components/jquery-ui/ui/draggable.js',
-        //     'app/assets/javascripts/{,*/}*.js',
-        //     '!app/assets/javascripts/app.min.js',
-        //     '!app/assets/javascripts/_tmp/app.js'
-        //   ],
-        //   'app/tests/all-tests.js': [
-        //     'app/assets/javascripts/app.min.js',
-        //     'app/tests/test.js'
-        //   ]
-        // }
       }
     },
 
@@ -60,30 +44,29 @@ module.exports = function(grunt) {
           compress: false,
           mangle: false
         },
-        // files: {
-        //   'app/assets/javascripts/app.min.js': [
-        //     'app/bower_components/jquery/dist/jquery.js',
-        //     'app/bower_components/jquery-ui/ui/core.js',
-        //     'app/bower_components/jquery-ui/ui/widget.js',
-        //     'app/bower_components/jquery-ui/ui/mouse.js',
-        //     'app/bower_components/jquery-ui/ui/draggable.js',
-        //     'app/assets/javascripts/{,*/}*.js',
-        //     '!app/assets/javascripts/app.min.js',
-        //     '!app/assets/javascripts/_tmp/app.js'
-        //   ],
-        //   'app/tests/all-tests.js': [
-        //     'app/assets/javascripts/app.min.js',
-        //     'app/tests/test.js'
-        //   ]
-        // }
         src: 'app/assets/javascripts/_tmp/app.js',
         dest: 'app/assets/javascripts/app.min.js'
       }
     },
 
-    // qunit: {
-    //   files: ['tests/**/*.html'],
-    // },
+    qunit: {
+      all: {
+        options: {
+          urls: [
+            'http://localhost:8000/tests/'
+          ]
+        }
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 8000,
+          base: 'app/'
+        }
+      }
+    },
 
     jshint: {
       options: {
@@ -117,15 +100,6 @@ module.exports = function(grunt) {
           'notify:scss'
         ]
       },
-      js: {
-        files: ['app/assets/javascripts/{,*/}*.js'],
-        tasks: [
-          'concat',
-          'uglify',
-          'jshint',
-          'notify:js'
-        ]
-      },
       livereload: {
         options: {
           livereload: true,
@@ -138,21 +112,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // useminPrepare: {
-    //   html: 'app/index.html',
-    //   options: {
-    //     dest: 'dist',
-    //     root: 'app'
-    //   }
-    // },
-
-    // usemin: {
-    //   html: 'dist/index.html',
-    //   options: {
-    //     assetsDirs: 'dist/'
-    //   }
-    // },
-
     notify: {
       scss: {
         options: {
@@ -160,30 +119,33 @@ module.exports = function(grunt) {
           message: 'Grunt successfully compiled your Sass files'
         }
       },
-      js: {
+      build: {
         options: {
-          title: 'JavaScript',
-          message: 'Grunt successfully concatenated and uglified your JS files'
+          title: 'Build',
+          message: 'Build complete'
         }
       }
     }
   });
 
-  grunt.registerTask("default", [
-    "sass",
-    "jshint",
-    // "qunit",
-    "concat",
-    "uglify",
-    "watch"
+  grunt.registerTask('default', [
+    'sass',
+    'jshint',
+    'watch'
   ]);
 
-  // grunt.registerTask("test", [
-  //   "jshint",
-  //   "qunit"
-  // ]);
+  grunt.registerTask('test', [
+    'jshint',
+    'concat',
+    'uglify',
+    'connect',
+    'qunit'
+  ]);
 
-  grunt.registerTask("build", [
-
+  grunt.registerTask('build', [
+    'sass',
+    'concat',
+    'uglify',
+    'notify:build'
   ]);
 };
