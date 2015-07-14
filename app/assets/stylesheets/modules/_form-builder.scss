@@ -14,3 +14,9 @@
   float: right;
   margin-bottom: 20px;
 }
+
+.form-builder__field-settings {
+  &.is-hidden {
+    @include visuallyhidden;
+  }
+}

@@ -17,14 +17,63 @@ var newField = (function() {
     // this function creates a new fieldset with default field type of text
     create: function() {
       $('.js-form-builder').append(
+        // should probably be using some sort of js templating here...
         '<fieldset>' +
           // use num here to make sure that the label and input field are connected so that if you click on the label, the input correct input field gains focus (usability ftw)
           '<label for="new-field-' + num + '">New Field</label>' +
           // again, use num
           '<input type="text" id="new-field-' + num + '">' +
-          '<button>Settings</button>' +
+          '<button class="js-settings-btn">Settings</button>' +
           '<button class="js-move-btn">Move</button>' +
           '<button>Delete</button>' +
+          '<div class="form-builder__field-settings is-hidden">' +
+            '<span>Settings:</span>' +
+            '<fieldset>' +
+              '<label for="new-field-label">Label</label>' +
+              '<input type="text" id="new-field-label" value="New Field">' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label for="new-field-type">Type</label>' +
+              '<select name="" id="new-field-type">' +
+                '<option value="radio">Radio Button</option>' +
+                '<option value="text">Text Input</option>' +
+              '</select>' +
+              '<fieldset>' +
+                '<label for="dynamic-splits">Dynamic Split(s)</label>' +
+                '<input type="checkbox" id="dynamic-splits">' +
+                '<select name="" id="dynamic-splits-amount">' +
+                  '<option value="1">Split 1</option>' +
+                  '<option value="2">Split 2</option>' +
+                '</select>' +
+              '</fieldset>' +
+              '<fieldset>' +
+                '<label for="option1">Option 1</label>' +
+                '<input type="text" id="option1">' +
+                '<select name="" id="option1split">' +
+                  '<option value="1">Split 1</option>' +
+                  '<option value="2">Split 2</option>' +
+                '</select>' +
+              '</fieldset>' +
+              '<fieldset>' +
+                '<label for="option2">Option 2</label>' +
+                '<input type="text" id="option2">' +
+                '<select name="" id="option2split">' +
+                  '<option value="1">Split 1</option>' +
+                  '<option value="2">Split 2</option>' +
+                '</select>' +
+              '</fieldset>' +
+              '<fieldset>' +
+                '<label for="option3">Option 3</label>' +
+                '<input type="text" id="option3">' +
+                '<select name="" id="option3split">' +
+                  '<option value="1">Split 1</option>' +
+                  '<option value="2">Split 2</option>' +
+                '</select>' +
+              '</fieldset>' +
+              '<button>Add More</button>' +
+            '</fieldset>' +
+            '<button>Save</button>' +
+          '</div>' +
         '</fieldset>'
       );
 
@@ -35,6 +84,11 @@ var newField = (function() {
       // there must be a better way than setting this over and over...
       $('button').click(function(e) {
         e.preventDefault();
+      });
+
+      // show field settings/preferences panel on newly created field
+      $('.js-settings-btn').click(function() {
+        $(this).siblings('.form-builder__field-settings').removeClass('is-hidden');
       });
     }
   };
